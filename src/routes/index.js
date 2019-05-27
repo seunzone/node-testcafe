@@ -7,6 +7,7 @@ const pages = new PagesContoller.default();
 
 const routes = (app) => {
   app.get('/', pages.getHome);
+  app.get('/new', pages.newTodo);
 
   app.post('/', (req, res, next) => {
     data.addTodo(req.body);

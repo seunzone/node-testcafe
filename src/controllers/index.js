@@ -23,4 +23,18 @@ export default class PagesController {
     };
     res.render('index', { renderData });
   }
+  /**
+       * @description - Gets the todo page
+       * @static
+       *
+       * @param {object} req - HTTP Request
+       * @param {object} res - HTTP Response
+       *
+       * @memberof PagesController
+       *
+       * @returns {object} Class instance
+       */
+  newTodo(req, res) {
+    res.render('new');
+  }
 }

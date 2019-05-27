@@ -3,14 +3,17 @@ const toDo = [
   {
     id: 1,
     title: 'Buy Groceries',
+    time: '1pm',
   },
   {
     id: 2,
     title: 'Visit the Mall',
+    time: '4pm',
   },
   {
     id: 3,
     title: 'Go on a date',
+    time: '7pm',
   },
 ];
 

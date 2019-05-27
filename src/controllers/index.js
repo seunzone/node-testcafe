@@ -1,4 +1,4 @@
-
+const data = require('../data');
 /**
  * @class PagesController
  *
@@ -18,6 +18,9 @@ export default class PagesController {
        * @returns {object} Class instance
        */
   getHome(req, res) {
-    res.render('index');
+    const renderData = {
+      todo: data.getAllTodo()
+    };
+    res.render('index', { renderData });
   }
 }

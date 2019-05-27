@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Page Title</title>
-</head>
+    <meta charset="UTF-8" />
+
+    <title>NodeJS Test Cafe</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/style.css">
+
 <body>
+    <div class="container">
+        <div class="row area">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="md-form active-pink active-pink-2 mb-3 mt-0">
 
-<h1>Hello Express</h1>
-<p>Hello World</p>
+                    <form action="/" method="post">
 
+                        <input class="form-control" type="text" name="title" placeholder="Type in Todo..." autofocus>
+                        <button class="btn btn-primary">
+                            Add ToDO
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="container">
+
+                        <h4 class="card-title">My Todo List</h4>
+                        <hr>
+
+                    </div>
+
+                    <div class="card-body">
+                        {{#each renderData.todo }}
+                        <h4 class="card-text"> {{this.title}}</h4>
+
+                        <a href="/{{this.id}}/delete" onclick="return confirm('Are you sure?');" class="btn btn-danger">
+                            Delete
+                        </a>
+                        <hr />
+                        {{/each}}
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
 </body>
+
+
 </html>

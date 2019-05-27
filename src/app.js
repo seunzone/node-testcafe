@@ -1,5 +1,5 @@
 import express from 'express';
-import volleyball from 'volleyball';
+// import volleyball from 'volleyball';
 import bodyParser from 'body-parser';
 import path from 'path';
 import exphbs from 'express-handlebars';
@@ -16,7 +16,7 @@ const app = express();
 app.use(cors());
 
 // Log requests to the console.
-app.use(volleyball);
+// app.use(volleyball);
 
 // parse request body content
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,6 +31,7 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 
 // serves up static files from the public folder.
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public/css', express.static(path.join(__dirname, 'public/css')));
 
 
 // Setup a default catch-all route that sends back a welcome message in JSON format.

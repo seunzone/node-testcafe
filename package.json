@@ -24,7 +24,7 @@
     "cors": "^2.8.5",
     "eslint": "^4.18.1",
     "express": "^4.16.2",
-    "express-handlebars": "^3.0.0",
+    "express-handlebars": "^5.3.1",
     "hbs": "^4.0.1",
     "volleyball": "^1.4.1"
   },
